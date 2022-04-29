@@ -1,3 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: "api/v1/foo#index"
+
+  use_doorkeeper do
+    skip_controllers :authorizations, :applications, :authorized_applications
+  end
+
+  namespace :api do
+    namespace :v1 do
+      namespace :foo do
+        get :index
+      end
+    end
+  end 
 end
