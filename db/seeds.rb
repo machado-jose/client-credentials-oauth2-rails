@@ -10,3 +10,8 @@ if Doorkeeper::Application.count.zero?
   Doorkeeper::Application.create!(name: "App 1", redirect_uri: "", scopes: "")
   Doorkeeper::Application.create!(name: "App 2", redirect_uri: "", scopes: "")
 end
+
+User.first_or_create(email: 'test@example.com',
+                     password: 'password',
+                     password_confirmation: 'password'
+)

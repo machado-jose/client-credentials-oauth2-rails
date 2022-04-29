@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: "api/v1/foo#index"
 
   use_doorkeeper do
