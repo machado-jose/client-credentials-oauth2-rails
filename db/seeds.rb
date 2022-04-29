@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 if Doorkeeper::Application.count.zero?
-  Doorkeeper::Application.create!(name: "App 1", redirect_uri: "", scopes: "")
-  Doorkeeper::Application.create!(name: "App 2", redirect_uri: "", scopes: "")
+  Doorkeeper::Application.create!(name: "App 1", redirect_uri: "", scopes: "index")
+  Doorkeeper::Application.create!(name: "App 2", redirect_uri: "", scopes: "commom")
 end
 
 User.first_or_create(email: 'test@example.com',

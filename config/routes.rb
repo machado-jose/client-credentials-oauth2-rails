@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       namespace :foo do
         get :index
+        get :common
       end
     end
   end 
